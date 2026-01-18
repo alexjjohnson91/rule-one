@@ -48,7 +48,7 @@ export default function Projections({ companies }: ProjectionIndexProps) {
             </div>
 
             {companies.map((company) => {
-                return <div>{company.ticker}</div>;
+                return <div key={company.ticker}>{company.ticker}</div>;
             })}
         </AppLayout>
     );
