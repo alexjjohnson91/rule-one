@@ -34,13 +34,13 @@ jobs:
           node-version: '22'
 
       - name: Install Node Dependencies
-        run: npm i
+        run: pnpm i
 
       - name: Install Dependencies
         run: composer install --no-interaction --prefer-dist --optimize-autoloader
 
       - name: Build Assets
-        run: npm run build
+        run: pnpm run build
 
       - name: Copy Environment File
         run: cp .env.example .env

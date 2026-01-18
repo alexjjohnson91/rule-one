@@ -13,7 +13,7 @@ import {
     SidebarMenuButton,
     SidebarMenuItem,
 } from '@/components/ui/sidebar';
-import { dashboard } from '@/routes';
+import { dashboard, projections } from '@/routes';
 import { type NavItem } from '@/types';
 
 import AppLogo from './app-logo';
@@ -22,6 +22,11 @@ const mainNavItems: NavItem[] = [
     {
         title: 'Dashboard',
         href: dashboard(),
+        icon: LayoutGrid,
+    },
+    {
+        title: 'Projections',
+        href: projections(),
         icon: LayoutGrid,
     },
 ];
