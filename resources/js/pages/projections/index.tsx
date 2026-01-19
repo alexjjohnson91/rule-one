@@ -1,4 +1,4 @@
-import { Head, router } from '@inertiajs/react';
+import { Head, router, useForm } from '@inertiajs/react';
 import { useState } from 'react';
 
 import { Button } from '@/components/ui/button';
@@ -22,6 +22,8 @@ interface ProjectionIndexProps {
 
 export default function Projections({ companies }: ProjectionIndexProps) {
     const [ticker, setTicker] = useState('');
+    const [revenue, setRevenue] = useForm('');
+
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
         if (ticker.trim()) {
